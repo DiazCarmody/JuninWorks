@@ -3,7 +3,7 @@
     <div>
     <form autocomplete="off" action="./logica/signin.php" method="POST">
             <img src="./imgs/page_icon.png">
-            <h1>Tienda Sport</h1>
+            <h1>Junín Works</h1>
             <div></div>
                 <input type="text" name="usuario_nombre" placeholder="Nombre" required>
 
