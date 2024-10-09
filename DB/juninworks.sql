@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-10-2024 a las 05:42:11
+-- Tiempo de generación: 09-10-2024 a las 17:27:30
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -136,6 +136,8 @@ CREATE TABLE `usuarios` (
   `usuario_id` int(11) NOT NULL,
   `usuario_nombre` varchar(250) NOT NULL,
   `usuario_apellido` varchar(250) NOT NULL,
+  `usuario_email` varchar(250) DEFAULT NULL,
+  `usuario_clave` varchar(250) DEFAULT NULL,
   `usuario_fotoPerfil` varchar(500) NOT NULL,
   `usuario_ubicacion` varchar(250) NOT NULL,
   `usuario_biografia` varchar(200) NOT NULL,
