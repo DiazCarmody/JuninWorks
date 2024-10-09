@@ -1,6 +1,6 @@
 <?php
-require_once('./inc/session.php');
-require_once('./backend/main.php');
+require_once('../inc/session.php');
+require_once('./main.php');
 ##almaceno los datos
 $email=limpiarString($_POST['email_usuario']);
 $clave=limpiarString($_POST['clave_usuario']);
