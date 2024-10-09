@@ -148,16 +148,4 @@ function enviarEmail($emailReceptor, $subject, $message){
     return $mail->send();
 }
 //FUNCIÓN PARA ENVIAR EMAILS
-//FUNCIÓN PARA AGREGAR PEDIDOS AL HISTORIAL DE COMPRAS, me fallaba el trigger...
-function agregarAlHistorial($pedido, $usuario){
-	$con=conectar();
-	$queryAgregarAlHistorial=$con->prepare("INSERT INTO historialdecompras() 
-	VALUES(NULL, :compra_pedido, :compra_usuario, current_timestamp());");
-	$arrayAdicionHistorial=[
-		":compra_pedido"=>$pedido,
-		":compra_usuario"=>$usuario
-	];
-	return $queryAgregarAlHistorial->execute($arrayAdicionHistorial);
-}
-//FUNCIÓN PARA AGREGAR PEDIDOS AL HISTORIAL DE COMPRAS
 ?>
