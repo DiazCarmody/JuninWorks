@@ -1,0 +1,90 @@
+.modal {
+    text-align: center;
+    display: block; /* Escondido por defecto */
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo más oscuro */
+    backdrop-filter: blur(10px);
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    max-height: 80vh;
+    max-width: 600px;
+    max-width: 500px; /* Para que no sea muy grande */
+}
+
+/* Estilo para el botón de cerrar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo para la tarjeta */
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Botón a la derecha */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la imagen dentro de la tarjeta */
+.card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+/* Contenedor para la imagen y el nombre */
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1; /* Ocupa el espacio disponible para que el botón se quede a la derecha */
+}
+
+/* Estilo para el nombre */
+.card-content h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Estilo para el botón dentro de la tarjeta */
+.solicitud-btn {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.solicitud-btn:hover {
+    background-color: #0056b3;
+}
