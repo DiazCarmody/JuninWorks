@@ -1,5 +1,5 @@
 :root[data-theme="light"]{
-  --background-color: #fff;
+  --background-color: #fafafa;
   --selected-background: #f8f9fa;
   --border-color: #DADCE0;
 
@@ -14,6 +14,7 @@
 
   --showsun: block;
   --showmoon: none;
+  --tema: "claro";
 }
 
 :root[data-theme="dark"]{
@@ -32,6 +33,7 @@
 
   --showsun: block;
   --showmoon: none;
+  --tema: "oscuro";
 }
 
 
@@ -75,7 +77,6 @@ body{
 nav {
   background: var(--background-color);
   max-height: 57px;
-  overflow: hidden;
   width: 100%;
 
   display: flex;
@@ -100,14 +101,12 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  line-height: 80px;
   margin: 0 4px;
 }
 
 nav ul li a {
   color: var(--unselected-font);
-  padding: 7px 13px;
-  border-radius: 3px;
+  padding: 16px 16px;
   text-transform: uppercase;
 
   max-height: 57px;
@@ -115,12 +114,26 @@ nav ul li a {
   display: flex;
   flex-grow: 0;
   align-items: center;
+  justify-content: center;
 
   position: relative;
 }
+nav ul li a:hover > .tooltip {
+  display: initial;
+}
 
-nav ul li a span{
-  margin-right: 8px;
+.navtext{
+  display: none;
+}
+
+.tooltip{
+  position: absolute;
+  bottom: -40px;
+  padding: 4px 14px;
+  background-color: var(--background-color);
+  border: var(--border-color) 1px solid;
+  border-radius: 30px;
+  display: none;
 }
 
 a.active,
@@ -167,6 +180,27 @@ a:hover::after{
 #check {
   display: none;
 }
+#darkmode {
+  color: var(--fontcolor);
+  position: relative;
+  border: none;
+  user-select: none;
+}
+#darkmodeicon {
+  display: var(--showmoon);
+  color: var(--fontcolor);
+  cursor: pointer;
+}
+#lightmodeicon {
+  display: var(--showsun);
+  color: var(--fontcolor);
+  cursor: pointer;
+}
+#toggler {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
 
 @media (max-width: 1050px) {
   label.logo {
@@ -183,6 +217,12 @@ a:hover::after{
   nav{
     justify-content: center;
     align-items: center;
+  }
+  .navtext{
+    display: initial;
+  }
+  nav ul li a span{
+    margin-right: 10px;
   }
   nav ul {
     display: flex;
@@ -210,8 +250,8 @@ a:hover::after{
 
   nav ul li {
     display: block;
-    margin: 30px 0;
-    line-height: 30px;
+    margin: 12px 0;
+    line-height: 20px;
   }
 
   nav ul li a{
@@ -229,6 +269,15 @@ a:hover::after{
   }
   .checkbtn{
     margin-top: 10px;
+  }
+
+  nav ul li a:hover > .tooltip {
+    display: none;
+  }
+
+  .texttheme::after{
+    content: var(--tema);
+    padding: 8px;
   }
 }
 
