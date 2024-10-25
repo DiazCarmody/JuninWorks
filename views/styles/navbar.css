@@ -416,5 +416,9 @@ a:hover::after{
   a:hover::after{
     height: 0px;
   }
+
+   .pcaccountbutton{
+    display: none;
+  }
   
 }
