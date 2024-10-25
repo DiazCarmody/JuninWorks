@@ -1,19 +1,21 @@
-document.addEventListener('DOMContentLoaded', ()=> {
-    const toggler = document.querySelector('.toggler');
+document.addEventListener('DOMContentLoaded', () => {
+    const darkmodebutton = document.querySelector('.darkmodebutton');
     const root = document.documentElement;
 
+    // Establecer el tema inicial basado en el almacenamiento local
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    root.setAttribute('data-theme', savedTheme);
 
-    if (root.getAttribute('data-theme') === 'dark'){
-        toggler.checked = true;
+    darkmodebutton.addEventListener('click', toggleTheme);
+
+    function toggleTheme() {
+        // Obtener el tema actual y alternarlo
+        const currentTheme = root.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+        // Cambiar el atributo data-theme y guardar en localStorage
+        root.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
     }
-    toggler.addEventListener('click', toggleTheme);
+});
 
-
-    function toggleTheme(){
-        const setTheme = toggler.checked ? 'dark' : 'light';
-
-
-        root.setAttribute('data-theme', setTheme);
-        localStorage.setItem('theme', setTheme);
-    }
-})
