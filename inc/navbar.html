@@ -11,6 +11,7 @@
 
   <link rel="stylesheet" href="../views/styles/navbar.css">
 
+  <script src="../scripts/navbar.js"></script>
   <script src="../scripts/darkmode.js"></script>
   <script>
 
@@ -40,6 +41,12 @@
     <!-- Site logo -->
     <label class="logo">JuninWorks</label>
 
+    <li class="phoneaccountbutton">
+      <a href="#" id="phoneaccountbutton">
+        <span class="material-symbols-outlined">account_circle</span>
+      </a>
+    </li>
+
     <!-- Navigation links -->
     <ul>
       <li>
@@ -60,38 +67,6 @@
 
       <li>
         <a href="#"> 
-          <span class="material-symbols-outlined">contacts</span> 
-          <span class="navtext">Contactos </span> 
-          <span class="tooltip">Contactos</span> 
-        </a>
-      </li>
-
-      <li>
-        <a href="#"> 
-          <span class="material-symbols-outlined">saved_search</span> 
-          <span class="navtext">Recomendados </span> 
-          <span class="tooltip">Recomendados</span> 
-        </a>
-      </li>
-
-      <li>
-        <a href="#"> 
-          <span class="material-symbols-outlined">auto_stories</span> 
-          <span class="navtext">Overview </span> 
-          <span class="tooltip">Overview</span> 
-        </a>
-      </li>
-
-      <li>
-        <a href="#"> 
-          <span class="material-symbols-outlined">inventory_2</span> 
-          <span class="navtext">Proyectos </span> 
-          <span class="tooltip">Proyectos</span> 
-        </a>
-      </li>
-
-      <li>
-        <a href="#"> 
           <span class="material-symbols-outlined">notifications</span> 
           <span class="navtext"> Notificaciones</span> 
           <span class="tooltip">Notificaciones</span> 
@@ -99,27 +74,65 @@
       </li>
 
       <li>
-        <a href="#"> 
-          <span class="material-symbols-outlined">account_circle</span> 
+        <a href="#" id="accountbutton">
+          <span class="material-symbols-outlined">account_circle</span>
           <span class="navtext"> Cuenta</span> 
           <span class="tooltip">Cuenta</span> 
         </a>
       </li>
+    </ul>
+  </nav>
 
-      <li id="darkmode" class="darkmode">
-        <a>
-          <label for="toggler">
-              <span class="material-symbols-outlined" id="lightmodeicon">light_mode</span>
-              <span class="material-symbols-outlined" id="darkmodeicon">dark_mode</span>
-          </label>
-          <span class="navtext texttheme"> Tema</span> 
-          <span class="tooltip">Tema</span> 
+    <ul id="accountnav">
+
+      <li class="accountsection">
+        <section>
+          <span class="material-symbols-outlined">account_circle</span>
+          <span class="accountname">Nombre de la cuenta</span>
+        </section>
+
+        <a id="closeaccountnav">
+          <span class="material-symbols-outlined">close</span>
         </a>
-        <input type="checkbox" name="" id="toggler" class="toggler">
+      </li>
+
+      <li class="oab">
+        <a href="#"> 
+          <span class="material-symbols-outlined">saved_search</span> 
+          <span class="navtext">Recomendados </span> 
+        </a>
+      </li>
+
+      <li class="oab">
+        <a href="#"> 
+          <span class="material-symbols-outlined">inventory_2</span> 
+          <span class="navtext">Proyectos </span> 
+        </a>
+      </li>
+
+      <li class="oab">
+        <a href="#"> 
+          <span class="material-symbols-outlined">contacts</span> 
+          <span class="navtext">Contactos </span> 
+        </a>
+      </li>
+
+      <li class="oab">
+        <a href="#"> 
+          <span class="material-symbols-outlined">auto_stories</span> 
+          <span class="navtext">Overview </span> 
+        </a>
+      </li>
+
+      <li id="darkmode" class="darkmode darkmodebutton oab">
+        <a>
+            <span class="material-symbols-outlined" id="lightmodeicon">light_mode</span>
+            <span class="material-symbols-outlined" id="darkmodeicon">dark_mode</span>
+            <span class="navtext texttheme"> Tema</span> 
+        </a>
       </li>
 
     </ul>
-  </nav>
 
 </body>
 
