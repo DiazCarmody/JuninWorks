@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" data-theme="light">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Nav</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <link rel="stylesheet" href="../Styles/navbar.css">
+
+  <script src="../scripts/navbar.js"></script>
+  <script src="../scripts/darkmode.js"></script>
+  <script>
+
+    const storageTheme = localStorage.getItem('theme');
+    const systemColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+
+    const newTheme = storageTheme ?? systemColorScheme;
+
+
+    document.documentElement.setAttribute('data-theme', newTheme);
+
+  </script>
+
+</head>
+
+<body>
+  <nav>
+    <!-- Checkbox for toggling menu -->
+    <input type="checkbox" id="check">
+
+    <!-- Menu icon -->
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"><span class="material-symbols-outlined">menu</span></i>
+    </label>
+
+    <!-- Site logo -->
+    <label class="logo">JuninWorks</label>
+
+    <li class="phoneaccountbutton">
+      <a href="#" id="phoneaccountbutton">
+        <span class="material-symbols-outlined">account_circle</span>
+      </a>
+    </li>
+
+    <!-- Navigation links -->
+    <ul>
+      <li>
+        <a class="active" href="#"> 
+          <span class="material-symbols-outlined">home</span> 
+          <span class="navtext">Inicio</span> 
+          <span class="tooltip">Inicio</span> 
+        </a>
+      </li>
+
+      <li>
+        <a href="#"> 
+          <span class="material-symbols-outlined">business_center</span> 
+          <span class="navtext">Empresas </span> 
+          <span class="tooltip">Empresas</span> 
+        </a>
+      </li>
+
+      <li>
+        <a href="#"> 
+          <span class="material-symbols-outlined">notifications</span> 
+          <span class="navtext"> Notificaciones</span> 
+          <span class="tooltip">Notificaciones</span> 
+        </a>
+      </li>
+
+      <li>
+        <a href="#" id="accountbutton" class="pcaccountbutton">
+          <span class="material-symbols-outlined">account_circle</span>
+          <span class="navtext"> Cuenta</span> 
+          <span class="tooltip">Cuenta</span> 
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+    <ul id="accountnav">
+
+      <li class="accountsection">
+        <section>
+          <span class="material-symbols-outlined">account_circle</span>
+          <span class="accountname">Nombre de la cuenta</span>
+        </section>
+
+        <a id="closeaccountnav">
+          <span class="material-symbols-outlined">close</span>
+        </a>
+      </li>
+
+      <li class="oab">
+        <a href="#"> 
+          <span class="material-symbols-outlined">saved_search</span> 
+          <span class="navtext">Recomendados </span> 
+        </a>
+      </li>
+
+      <li class="oab">
+        <a href="#"> 
+          <span class="material-symbols-outlined">inventory_2</span> 
+          <span class="navtext">Proyectos </span> 
+        </a>
+      </li>
+
+      <li class="oab">
+        <a href="#"> 
+          <span class="material-symbols-outlined">contacts</span> 
+          <span class="navtext">Contactos </span> 
+        </a>
+      </li>
+
+      <li class="oab">
+        <a href="#"> 
+          <span class="material-symbols-outlined">auto_stories</span> 
+          <span class="navtext">Overview </span> 
+        </a>
+      </li>
+
+      <li id="darkmode" class="darkmode darkmodebutton oab">
+        <a>
+            <span class="material-symbols-outlined" id="lightmodeicon">light_mode</span>
+            <span class="material-symbols-outlined" id="darkmodeicon">dark_mode</span>
+            <span class="navtext texttheme"> Tema</span> 
+        </a>
+      </li>
+
+    </ul>
+
+</body>
+
+</html>

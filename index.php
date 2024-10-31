@@ -24,10 +24,10 @@ require_once ('./backend/main.php');//se incluye para iniciar sesión
             if (is_file("./views/$vista.php")) {
                 if (isset($_SESSION['id']) && isset($_SESSION['email'])) {
                     if (isset($_SESSION['estadoSesion']) && $_SESSION['estadoSesion'] == true) {
-                        include("./inc/navbar.php");
+                        include("./inc/navbar.html");
                         include("./views/$vista.php");
                     } else {
-                        include("./inc/navbar.php");
+                        include("./inc/navbar.html");
                         include("./views/$vista.php");
                     }
                 } else {
