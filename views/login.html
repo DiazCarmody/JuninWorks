@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../styles/login.css">
+</head>
+<body>
+    <main>
+        <div class="form">
+            <form action="" class="form-register">
+                <h2>Crear cuenta</h2>
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Contraseña">
+                <button>Registrarse</button>
+            </form> 
+            <p>¿Ya tienes una cuenta? <a href="#">Iniciar sesión</a></p>
+        </div>
+        <div class="carrousel" id="carousel">
+            <span class="sub-carrousel">
+                <img src="../imgs/phone.png">
+                <h2>Customiza tu perfil</h2>
+                <p>Ingresa al menú de tu perfil y personaliza bien tus intereses y habilidades</p>
+            </span>
+            <span class="sub-carrousel">
+                <img src="../imgs/tablet.png">
+                <h2>Forma parte de proyectos</h2>
+                <p>Puedes interactuar con otras personas en otros proyectos para ayudarlos</p>
+            </span>
+            <span class="sub-carrousel">
+                <img src="../imgs/pc.png">
+                <h2>Encuentra trabajo rápidamente</h2>
+                <p>Busca las mejores ofertas laborales del mercado</p>
+            </span>
+        </div>  
+    </main>
+
+    <script>
+        const carousel = document.getElementById('carousel');
+        const slides = carousel.getElementsByClassName('sub-carrousel');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            // Ocultar todos los slides
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            // Mostrar el slide actual
+            slides[index].style.display = 'flex';
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length; // Loop back to the first slide
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Loop to the last slide
+            showSlide(currentIndex);
+        }
+
+        // Inicializar mostrando el primer slide
+        showSlide(currentIndex);
+
+        // Desplazamiento automático
+        const interval = setInterval(nextSlide, 5000); // Cambia de slide cada 5 segundos
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+:root{
+    --blue: #2563eb;
+    --red: #dc2626;
+    --orange: #ea580c;
+    --black: #111827;
+    --white: #ffffff;
+    --gray: #d7dbdd;
+}
+
+footer{
+    width: 100%;
+    padding: 15px;
+    background: var(--gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.fa-brands{
+    background: var(--white);
+    font-size: 22px;
+    color: var(--black);
+    padding: 10px;
+    border-radius: 15px;
+    transition: .2s;
+}
+
+.span-social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+i:hover{
+    background: var(--blue);
+    color: var(--white);
+}
+
+.text-creators{
+    text-align: center;
+}
+
+@media screen and (max-width: 420px){
+    .title-footer{
+        font-size: 5.7dvw;
+    }
+
+    .subtitle-footer{
+        font-size: 4.4dvw;
+    }
+
+    .text-creators{
+        font-size: 3.8dvw;
+    }
+}
