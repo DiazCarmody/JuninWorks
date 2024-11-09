@@ -1,0 +1,97 @@
+/* ---------------TEMAS--------------- */
+
+:root[data-theme="light"]{
+  --background-color: #fafafa;
+  --selected-background: #f8f9fa;
+  --border-color: #DADCE0;
+
+  --unselected-font: #5f6368;
+  --font-color: #202124;
+  --hour-color: #20212499;
+  --shadow-color: #3c40434d;
+
+  --omsg-color: #d6d7db;
+  --ymsg-color: #edeff3;
+
+  --scrollthumb-color: #aaa;
+  --scrollthumb-hover-color: #888;
+
+  --red-color: #EA4335;
+  --yellow-color: #FBBC05;
+  --green-color: #8DC44F;
+  --blue-color: #4486F4;
+
+  --showsun: block;
+  --showmoon: none;
+  --tema: "claro";
+}
+
+:root[data-theme="dark"]{
+  --background-color: #1C1D20;
+  --selected-background: #2E3033;
+  --border-color: #3C4043;
+
+  --omsg-color: #3f4346;
+  --ymsg-color: #565a5f;
+
+  --scrollthumb-color: #888;
+  --scrollthumb-hover-color: #555;
+
+  --unselected-font: #80868B;
+  --font-color: #E8EAED;
+  --hour-color: #E8EAED99;
+  --shadow-color: #1C1D20;
+
+  --red-color: #EA4335;
+  --yellow-color: #FBBC05;
+  --green-color: #8DC44F;
+  --blue-color: #4486F4;
+
+  --showsun: block;
+  --showmoon: none;
+  --tema: "oscuro";
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+a{
+  text-decoration: none;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+
+  display: flex ;
+  flex-direction: column;
+
+  overflow-x: hidden;
+
+  font-size: 12px;
+
+  height: 100dvh;
+  width: 100%;
+
+  transition: 0.2s;
+
+  position: relative;
+
+  user-select: none;
+}
