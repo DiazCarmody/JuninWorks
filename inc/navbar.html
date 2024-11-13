@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" data-theme="light">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Nav</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <link rel="stylesheet" href="../views/styles/theme.css">
+  <link rel="stylesheet" href="../views/styles/navbar.css">
+
+  <script src="../scripts/navbar.js"></script>
+  <script src="../scripts/darkmode.js"></script>
+  <script>
+
+    const storageTheme = localStorage.getItem('theme');
+    const systemColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+
+    const newTheme = storageTheme ?? systemColorScheme;
+
+
+    document.documentElement.setAttribute('data-theme', newTheme);
+
+  </script>
+
+</head>
+
+<body>
+  <nav>
+    <!-- Checkbox for toggling menu -->
+    <input type="checkbox" id="check">
+
+    <!-- Menu icon -->
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"><span class="material-symbols-rounded">menu</span></i>
+    </label>
+
+    <!-- Site logo -->
+    <label class="logo">JuninWorks</label>
+
+    <li class="phoneaccountbutton">
+      <a href="#" id="phoneaccountbutton">
+        <span class="material-symbols-rounded">account_circle</span>
+      </a>
+    </li>
+
+    <!-- Navigation links -->
+    <ul>
+      <li>
+        <a class="active" href="#"> 
+          <span class="material-symbols-rounded">home</span> 
+          <span class="navtext">Inicio</span> 
+          <span class="tooltip">Inicio</span> 
+        </a>
+      </li>
+
+      <li>
+        <a href="#"> 
+          <span class="material-symbols-rounded">business_center</span> 
+          <span class="navtext">Empresas </span> 
+          <span class="tooltip">Empresas</span> 
+        </a>
+      </li>
+
+      <li>
+        <a href="#"> 
+          <span class="material-symbols-rounded">notifications</span> 
+          <span class="navtext"> Notificaciones</span> 
+          <span class="tooltip">Notificaciones</span> 
+        </a>
+      </li>
+
+      <li>
+        <a href="#" id="accountbutton" class="pcaccountbutton">
+          <span class="material-symbols-rounded">account_circle</span>
+          <span class="navtext"> Cuenta</span> 
+          <span class="tooltip">Cuenta</span> 
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+    <ul id="accountnav">
+
+      <li class="accountsection">
+        <section>
+          <span class="material-symbols-rounded">account_circle</span>
+          <span class="accountname">Nombre de la cuenta</span>
+        </section>
+
+        <a id="closeaccountnav">
+          <span class="material-symbols-rounded">close</span>
+        </a>
+      </li>
+      
+      <li class="oab">
+        <a href="#"> 
+          <span class="material-symbols-rounded">account_circle</span> 
+          <span class="navtext">Mi perfil </span> 
+        </a>
+      </li>
+
+      <li class="oab">
+        <a href="#"> 
+          <span class="material-symbols-rounded">saved_search</span> 
+          <span class="navtext">Recomendados </span> 
+        </a>
+      </li>
+
+      <li class="oab">
+        <a href="#"> 
+          <span class="material-symbols-rounded">inventory_2</span> 
+          <span class="navtext">Proyectos </span> 
+        </a>
+      </li>
+
+      <li class="oab">
+        <a href="#"> 
+          <span class="material-symbols-rounded">contacts</span> 
+          <span class="navtext">Contactos </span> 
+        </a>
+      </li>
+
+      <li class="oab">
+        <a href="#"> 
+          <span class="material-symbols-rounded">auto_stories</span> 
+          <span class="navtext">Overview </span> 
+        </a>
+      </li>
+
+      <li id="darkmode" class="darkmode darkmodebutton oab">
+        <a>
+            <span class="material-symbols-rounded" id="lightmodeicon">light_mode</span>
+            <span class="material-symbols-rounded" id="darkmodeicon">dark_mode</span>
+            <span class="navtext texttheme"> Tema</span> 
+        </a>
+      </li>
+
+    </ul>
+
+</body>
+
+</html>
