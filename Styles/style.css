@@ -75,6 +75,7 @@ main{
     border-radius: 50%;
     border: 2px solid var(--border-color);
     margin-left: 15px;
+    background-position: center;
 }
 .perfil-datos h2{
     color: var(--font-color);
@@ -257,6 +258,11 @@ main{
     border-top: none;
     background-color: var(--background-color);
     padding: 8px 0;
+    cursor: pointer;
+}
+.summary-menu label:hover{
+    transition: .3s;
+    background-color: var(--border-color);
 }
 .summary-menu label:last-child{
     border-bottom: 1px solid var(--border-color);
